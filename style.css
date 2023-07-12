@@ -1,0 +1,85 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.line {
+  width: 125px;
+  border: 1px solid;
+  margin: 25px auto;
+}
+
+.books-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+#books {
+  width: 70%;
+  text-align: left;
+  border: 2px solid black;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+tr {
+  border: none;
+  height: 3rem;
+}
+
+td {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  margin: 0 15px;
+}
+
+tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.form-container {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  height: 2.5rem;
+  border: 2px solid;
+  padding-left: 12px;
+  font-weight: bold;
+}
+
+input::placeholder {
+  padding-left: 12px;
+  color: black;
+  font-weight: bold;
+}
+
+form button {
+  float: right;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 3px solid;
+  font-weight: bold;
+  padding: 7px 25px;
+}
+
+table button {
+  cursor: pointer;
+  border: 3px solid;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 3px;
+}

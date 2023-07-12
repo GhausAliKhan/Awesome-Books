@@ -4,27 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Document Title -->
     <title>Awesome Books</title>
 </head>
 
 <body>
     <header></header>
     <main>
-        <h1>Awesome Books</h1>
-        <section id="books-container">
-            <ul id="booksList"></ul>
+        <section class="books-container">
+            <h1>All Awesome books</h1>
+            <table id="books">
+                <tbody id="booksList">
+                </tbody>
+            </table>
         </section>
+        <hr class="line">
         <section class="form-container">
+            <h2>Add a new book</h2>
             <form id="form">
-                <p>
-                    <input type="text" placeholder="Title" id="title">
-                </p>
-                <p>
-                    <input type="text" placeholder="Author" id="author">
-                </p>
-                <p>
+                <div>
+                    <input type="text" id="title-input" placeholder="Title">
+                </div>
+                <div>
+                    <input type="text" id="author-input" placeholder="Author">
+                </div>
+                <div>
                     <button type="submit" id="add-btn">Add</button>
-                </p>
+                </div>
             </form>
         </section>
     </main>
