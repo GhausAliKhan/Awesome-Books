@@ -6,10 +6,11 @@ const booksList = document.getElementById('booksList');
 let books = [];
 let id = 0;
 
-function addBook() {
-  localStorage.setItem('books', JSON.stringify(books));
-}
 class Collection {
+  static addBook() {
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+
   static loadBooks() {
     const storedBooks = JSON.parse(localStorage.getItem('books'));
     if (storedBooks) {
@@ -39,7 +40,7 @@ class Collection {
       books.splice(index, 1);
       booksList.innerHTML = '';
       books.forEach((book) => Collection.createBook(book));
-      addBook();
+      Collection.addBook();
     }
   }
 }
@@ -61,7 +62,7 @@ form.addEventListener('submit', (event) => {
   books.push(book);
   Collection.createBook(book);
   Collection.clearingFields();
-  addBook();
+  Collection.addBook();
 });
 
 document.addEventListener('DOMContentLoaded', Collection.loadBooks);
