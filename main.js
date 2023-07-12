@@ -6,6 +6,18 @@ const booksList = document.getElementById("booksList");
 let books = [];
 let id = 0;
 
+//  Inner Html Generating Books
+
+function createBook(book) {
+  const newBook = document.createElement("li");
+  newBook.innerHTML = `
+    <div>${book.title}</div>
+    <div>${book.author}</div>
+    <button type="button" class="remove-btn" data-id="${book.id}">Remove</button>
+    <hr>
+  `;
+  booksList.appendChild(newBook);
+}
 // Clearing Fields
 
 function clearingFields() {
