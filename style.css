@@ -10,7 +10,27 @@ a:hover {
   color: rgb(11, 94, 215);
   cursor: pointer;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 10px auto;
+  border: 2px solid;
+  padding: 10px;
+}
 
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-weight: bold;
+}
+
+.verticalLine {
+  height: 20px;
+  border: 1px solid;
+}
 .books-container {
   text-align: center;
   padding: 3rem;
