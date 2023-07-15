@@ -6,15 +6,37 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-.line {
-  width: 125px;
+a:hover {
+  color: rgb(11, 94, 215);
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 10px auto;
+  border: 2px solid;
+  padding: 10px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-weight: bold;
+}
+
+.verticalLine {
+  height: 20px;
   border: 1px solid;
-  margin: 25px auto;
 }
 
 .books-container {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem;
+  display: none;
 }
 
 #books {
@@ -50,6 +72,18 @@ tr:nth-child(even) {
   text-align: center;
   width: 50%;
   margin: 0 auto;
+  display: none;
+}
+
+form {
+  margin-top: 100px;
+}
+
+.form-container h2,
+.contact-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 50px;
 }
 
 input {
@@ -82,4 +116,38 @@ table button {
   padding: 10px 15px;
   font-weight: bold;
   border-radius: 3px;
+}
+
+.contact {
+  width: 50%;
+  margin: auto;
+  display: none;
+}
+
+.contact-list {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 75px;
+}
+
+.contact-paragraph {
+  margin: 50px 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  left: 2.5%;
+  font-weight: bold;
+  text-align: center;
+  width: 95%;
+  margin: 10px auto;
+  border: 2px solid;
+  padding: 10px;
+}
+
+.display {
+  display: block;
 }

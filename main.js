@@ -1,7 +1,14 @@
 const form = document.getElementById('form');
-const titleInput = document.getElementById('title-input');
-const authorInput = document.getElementById('author-input');
+const titleInput = document.getElementById('title');
+const authorInput = document.getElementById('author');
 const booksList = document.getElementById('booksList');
+
+const booksContainer = document.querySelector('.books-container');
+const formContainer = document.querySelector('.form-container');
+const contact = document.querySelector('.contact');
+const btnList = document.getElementById('btn-list');
+const btnAdd = document.getElementById('btn-add');
+const btnContact = document.getElementById('btn-contact');
 
 let books = [];
 let id = 0;
@@ -72,4 +79,33 @@ booksList.addEventListener('click', (event) => {
     const id = parseInt(event.target.getAttribute('data-id'), 10);
     Collection.removeBook(id);
   }
+});
+
+// Navigation Feature
+
+btnList.addEventListener('click', () => {
+  booksContainer.classList.add('display');
+  formContainer.classList.remove('display');
+  contact.classList.remove('display');
+  btnList.style.color = 'blue';
+  btnAdd.style.color = 'black';
+  btnContact.style.color = 'black';
+});
+
+btnAdd.addEventListener('click', () => {
+  booksContainer.classList.remove('display');
+  formContainer.classList.add('display');
+  contact.classList.remove('display');
+  btnList.style.color = 'black';
+  btnAdd.style.color = 'blue';
+  btnContact.style.color = 'black';
+});
+
+btnContact.addEventListener('click', () => {
+  booksContainer.classList.remove('display');
+  formContainer.classList.remove('display');
+  contact.classList.add('display');
+  btnList.style.color = 'black';
+  btnAdd.style.color = 'black';
+  btnContact.style.color = 'blue';
 });
